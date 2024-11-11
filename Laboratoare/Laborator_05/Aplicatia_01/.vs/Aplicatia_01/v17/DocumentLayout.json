@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\daria\\Documents\\GitHub\\Faculta\\Anul 2\\Structuri-de-date-si-algoritmi-SDA-\\Laboratoare\\Laborator_05\\Aplicatia_01\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A7E63AB9-82DE-4C9B-9238-F41420DDDC08}|Aplicatia_01.vcxproj|C:\\Users\\daria\\Downloads\\Filme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A7E63AB9-82DE-4C9B-9238-F41420DDDC08}|Aplicatia_01.vcxproj|C:\\Users\\daria\\Documents\\GitHub\\Faculta\\Anul 2\\Structuri-de-date-si-algoritmi-SDA-\\Laboratoare\\Laborator_05\\Aplicatia_01\\Filme.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A7E63AB9-82DE-4C9B-9238-F41420DDDC08}|Aplicatia_01.vcxproj|solutionrelative:Filme.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E63AB9-82DE-4C9B-9238-F41420DDDC08}|Aplicatia_01.vcxproj|C:\\Users\\daria\\Downloads\\Filme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,11 +17,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Filme.txt",
               "DocumentMoniker": "C:\\Users\\daria\\Downloads\\Filme.txt",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\Downloads\\Filme.txt",
@@ -34,13 +34,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Filme.c",
               "DocumentMoniker": "C:\\Users\\daria\\Documents\\GitHub\\Faculta\\Anul 2\\Structuri-de-date-si-algoritmi-SDA-\\Laboratoare\\Laborator_05\\Aplicatia_01\\Filme.c",
               "RelativeDocumentMoniker": "Filme.c",
               "ToolTip": "C:\\Users\\daria\\Documents\\GitHub\\Faculta\\Anul 2\\Structuri-de-date-si-algoritmi-SDA-\\Laboratoare\\Laborator_05\\Aplicatia_01\\Filme.c",
               "RelativeToolTip": "Filme.c",
-              "ViewState": "AgIAAK0AAAAAAAAAAAAqwNMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAQwHIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-10-28T14:49:04.262Z",
               "EditorCaption": ""

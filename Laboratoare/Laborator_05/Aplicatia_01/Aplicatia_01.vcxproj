@@ -135,6 +135,7 @@
     <Text Include="..\..\..\..\..\..\..\..\Downloads\Filme.txt">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Filme.txt</DeploymentContent>
     </Text>
+    <Text Include="Filme.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

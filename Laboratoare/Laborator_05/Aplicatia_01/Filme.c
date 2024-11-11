@@ -14,7 +14,7 @@ typedef struct {
     int premii; // 1 pentru "Da", 0 pentru "Nu"
 } Film;
 
-// Funcția de citire a filmelor din fișier
+
 int citesteFilme(Film filme[], const char* nume_fisier) {
     FILE* fisier = fopen(nume_fisier, "r");
     if (!fisier) {
@@ -35,7 +35,7 @@ int citesteFilme(Film filme[], const char* nume_fisier) {
         filme[nr_filme].categorie,
         premii) == 5) {
         
-        // Setează câmpul `premii` la 1 dacă valoarea este "Da" și la 0 dacă este "Nu"
+        
         filme[nr_filme].premii = (strcmp(premii, "Da") == 0) ? 1 : 0;
         nr_filme++;
     }
@@ -44,7 +44,7 @@ int citesteFilme(Film filme[], const char* nume_fisier) {
     return nr_filme;
 }
 
-// Funcția de sortare alfabetică după titlu
+
 void sortareAlfabetica(Film filme[], int nr_filme) {
     for (int i = 0; i < nr_filme - 1; i++) {
         for (int j = i + 1; j < nr_filme; j++) {
@@ -57,7 +57,7 @@ void sortareAlfabetica(Film filme[], int nr_filme) {
     }
 }
 
-// Funcția pentru a pune filmele premiate la început
+
 void separarePremiate(Film filme[], int nr_filme) {
     int i = 0, j = nr_filme - 1;
     while (i < j) {
@@ -71,17 +71,15 @@ void separarePremiate(Film filme[], int nr_filme) {
     }
 }
 
-// Funcția de comparare pentru qsort
+
 int comparaAn(const void* a, const void* b) {
     return ((Film*)a)->an - ((Film*)b)->an;
 }
 
-// Funcția de sortare crescătoare după an
 void sortareAn(Film filme[], int nr_filme) {
     qsort(filme, nr_filme, sizeof(Film), comparaAn);
 }
 
-// Funcția principală
 int main() {
     Film filme[MAX_FILME];
     int nr_filme = citesteFilme(filme, "Filme.txt");
