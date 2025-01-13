@@ -1,0 +1,5 @@
+Girona 10 10000 Girondis
+RealMadrid 90 5000000 Madrid
+ATM 80 7000000 Madrid
+Granada	19 100000 Granada
+Barcelona 97 1500000 Barcelona
