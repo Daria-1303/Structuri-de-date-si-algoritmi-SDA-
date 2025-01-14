@@ -74,44 +74,25 @@ void cerintaA_mutareEchipe(Echipa_T* echipe) {
 	}
 }
 
-void cerintaB_sortareEchipe(Echipa_T* echipe, int prim, int ultim) {
-	int stanga = prim + 1;
-	int dreapta = ultim;
+void cerintaB_sortareEchipe(Echipa_T* echipe) {
+	int i, j, min;
 
-	swap(&echipe[prim], &echipe[(prim + ultim) / 2]);
-
-	Echipa_T pivot = echipe[prim];
-
-	while (stanga <= dreapta) {
-		while (stanga <= ultim && echipe[stanga].puncte > pivot.puncte) {
-			stanga++;
+	for (i = 0; i < N - 1; i++) {
+		if (echipe[i].buget > 100000) {
+			min = i;
 		}
-
-		while (dreapta > prim && echipe[dreapta].puncte < pivot.puncte) {
-			dreapta--;
-		}
-
-		if (stanga < dreapta) {
-			swap(&echipe[stanga], &echipe[dreapta]);
-			stanga++;
-			dreapta--;
-		}
-
 		else {
-			stanga++;
+			continue;
 		}
+
+		for (j = i + 1; j < N; j++) {
+			if (echipe[j].buget > 100000 && echipe[j].puncte > echipe[min].puncte) {
+				min = j;
+			}
+		}
+
+		swap(&echipe[min], &echipe[i]);
 	}
-
-	swap(&echipe[prim], &echipe[dreapta]);
-
-	if (prim < dreapta - 1) {
-		cerintaB_sortareEchipe(echipe, prim, dreapta - 1);
-	}
-
-	if (dreapta + 1 < ultim) {
-		cerintaB_sortareEchipe(echipe, dreapta + 1, ultim);
-	}
-
 }
 
 int main(int argc, char *argv[]) {
@@ -137,16 +118,7 @@ int main(int argc, char *argv[]) {
 	printf("Date dupa cerinta A : \n");
 	afisareDate(echipe);
 
-	// numarare echipe buget mare
-	int nrEchipeBugetMare = 0;
-
-	for (int i = 0; i < N; i++) {
-		if (echipe[i].buget > 100000) {
-			nrEchipeBugetMare++;
-		}
-	}
-
-	cerintaB_sortareEchipe(echipe, 0, nrEchipeBugetMare - 1);
+	cerintaB_sortareEchipe(echipe);
 	printf("Date dupa cerinta B : \n");
 	afisareDate(echipe);
 
