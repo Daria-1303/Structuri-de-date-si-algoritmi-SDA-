@@ -22,3 +22,60 @@ Notă:
 
 	Este obligatorie exemplificarea efectului apelului funcțiilor implementate pe un exemplu ales.
 */
+
+#include <stdio.h>
+
+#define NR_STEAGURI 3
+
+const char* culori[] = {"alb", "galben", "rosu", "verde", "albastru", "negru"};
+
+#define NR_CULORI 6
+
+char* steag[3];
+
+int acceptabil(int pos, int k) {
+	for (int i = 0; i < k; i++) {
+		if (strcmp(steag[i], culori[pos]) == 0) {
+			return 0;
+		}
+	}
+
+	if (k == 1 && (strcmp(culori[pos], "galben") != 0) && (strcmp(culori[pos], "verde") != 0)) {
+		return 0;
+	}
+
+	return 1;
+}
+
+int eSolutie(int k) {
+	return k == NR_STEAGURI;
+}
+
+void afiseazaSolutie() {
+	for (int i = 0; i < NR_STEAGURI; i++) {
+		printf("%s\t", steag[i]);
+	}
+
+	printf("\n");
+}
+
+void permuta(int k) {
+	int i;
+
+	if (eSolutie(k)) {
+		afiseazaSolutie();
+	}
+	else {
+		for (int i = 0; i < NR_CULORI; i++) {
+			if (acceptabil(i, k)) {
+				steag[k] = culori[i];
+				permuta(k + 1);
+			}
+		}
+	}
+}
+
+int main(void) {
+	permuta(0);
+	return 0;
+}
